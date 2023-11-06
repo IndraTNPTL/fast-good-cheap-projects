@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  font-family: "Poppins", sans-serif;
+  --header-height: 7rem;
+  --footer-height: 4rem;
+  --main-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #060816;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  padding: 2rem 3rem;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+header {
+  height: var(--header-height);
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+main {
+  height: var(--main-height);
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+  cursor: pointer;
+}
+
+.item span {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+footer {
+  height: var(--footer-height);
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --header-height: 10rem;
+    --footer-height: 4rem;
+    --main-height: calc(100vh - var(--header-height) - var(--footer-height));
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer p {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+}
