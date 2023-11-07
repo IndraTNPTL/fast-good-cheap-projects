@@ -18,21 +18,19 @@ function App() {
       <Header text="Let's choose what would be the best combination for your project!" />
       <main className="container">
         <div className="sub-container">
-          <div
-            className="item"
-            onClick={() => {
-              if (cheap && good) {
-                if (zeroOrOne() === 0) {
-                  setCheap(false);
-                } else {
-                  setGood(false);
-                }
-              }
-              setFast(!fast);
-            }}
-          >
+          <div className="item">
             <span>FAST</span>
             <Switch
+              onChange={() => {
+                if (cheap && good) {
+                  if (zeroOrOne() === 0) {
+                    setCheap(false);
+                  } else {
+                    setGood(false);
+                  }
+                }
+                setFast(!fast);
+              }}
               checked={fast}
               onColor="#5D48D2"
               offColor="#151030"
@@ -48,21 +46,19 @@ function App() {
             />
           </div>
 
-          <div
-            className="item"
-            onClick={() => {
-              if (cheap && fast) {
-                if (zeroOrOne() === 0) {
-                  setCheap(false);
-                } else {
-                  setFast(false);
-                }
-              }
-              setGood(!good);
-            }}
-          >
+          <div className="item">
             <span>GOOD</span>
             <Switch
+              onChange={() => {
+                if (cheap && fast) {
+                  if (zeroOrOne() === 0) {
+                    setCheap(false);
+                  } else {
+                    setFast(false);
+                  }
+                }
+                setGood(!good);
+              }}
               checked={good}
               onColor="#5D48D2"
               offColor="#151030"
@@ -78,21 +74,19 @@ function App() {
             />
           </div>
 
-          <div
-            className="item"
-            onClick={() => {
-              if (fast && good) {
-                if (zeroOrOne() === 0) {
-                  setGood(false);
-                } else {
-                  setFast(false);
-                }
-              }
-              setCheap(!cheap);
-            }}
-          >
+          <div className="item">
             <span>CHEAP</span>
             <Switch
+              onChange={() => {
+                if (fast && good) {
+                  if (zeroOrOne() === 0) {
+                    setGood(false);
+                  } else {
+                    setFast(false);
+                  }
+                }
+                setCheap(!cheap);
+              }}
               checked={cheap}
               onColor="#5D48D2"
               offColor="#151030"
